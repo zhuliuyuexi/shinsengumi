@@ -299,7 +299,7 @@ define gui.main_menu_text_xalign = 1.0
 ## components when an overlay or window is not present.
 
 ## Generic frames.
-define gui.frame_borders = Borders(4, 4, 4, 4)
+define gui.frame_borders = Borders(1, 1, 1, 1)
 
 ## The frame that is used as part of the confirm screen.
 define gui.confirm_frame_borders = Borders(40, 40, 40, 40)
@@ -355,16 +355,16 @@ define gui.unscrollable = "hide"
 define config.history_length = 250
 
 ## 历史屏幕条目的高度，或设置为“None”以使高度变量自适应。
-define gui.history_height = 140
+define gui.history_height = 120
 
 ## 所指定叙述角色的标签的坐标、宽度和对齐方式。
-define gui.history_name_xpos = 155
+define gui.history_name_xpos = 150
 define gui.history_name_ypos = 0
-define gui.history_name_width = 155
+define gui.history_name_width = 255
 define gui.history_name_xalign = 1.0
 
 ## 对话文本的坐标、宽度和对齐方式。
-define gui.history_text_xpos = 170
+define gui.history_text_xpos = 180
 define gui.history_text_ypos = 2
 define gui.history_text_width = 740
 define gui.history_text_xalign = 0.0
@@ -457,7 +457,7 @@ init python:
         gui.pref_button_spacing = 10
 
         gui.history_height = 190
-        gui.history_text_width = 690
+        gui.history_text_width = 600
 
         gui.quick_button_text_size = 20
 

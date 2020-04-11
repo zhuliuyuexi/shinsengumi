@@ -379,6 +379,7 @@ screen about():
     style_prefix "about"
 
     frame:
+        xfill True
         add "gui/main_menu.png"
         vbox:
             xpos 150 ypos 130
@@ -433,11 +434,11 @@ screen save():
         top_margin 30
         has vbox
         hbox:
-            xpos 450 ypos 20
+            xpos 250 ypos 20
             textbutton _("上一页") action FilePagePrevious()
             textbutton _("Auto") action FilePage("auto")
 
-            for i in range(1, 10):
+            for i in range(1, 20):
                 textbutton str(i) action FilePage(i)
             textbutton _("下一页") action FilePageNext()
         hbox:
@@ -481,11 +482,11 @@ screen load():
         top_margin 30
         has vbox
         hbox:
-            xpos 450 ypos 20
+            xpos 250 ypos 20
             textbutton _("上一页") action FilePagePrevious()
             textbutton _("Auto") action FilePage("auto")
 
-            for i in range(1, 10):
+            for i in range(1, 20):
                 textbutton str(i) action FilePage(i)
             textbutton _("下一页") action FilePageNext()
         hbox:
@@ -520,6 +521,103 @@ screen load():
 ## 设置屏幕允许玩家配置游戏以更好地适应自己。
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
+screen preferences():
+    tag menu
+    add "gui/main_menu.png"
+    grid 2 1:
+        style_prefix "prefs"
+        xpos 180 ypos 100
+        # 左列。
+        vbox:
+            spacing 15
+            frame:
+                style_prefix "pref"
+                has vbox
+
+                label _("显示") xalign 0.5
+                textbutton _("窗口显示") action Preference("display", "window") xalign 0.5
+                textbutton _("全屏显示") action Preference("display", "fullscreen") xalign 0.5
+
+            frame:
+                style_prefix "pref"
+                has vbox
+
+                label _("转场") xalign 0.5
+                textbutton _("全部显示") action Preference("transitions", "all") xalign 0.5
+                textbutton _("不显示") action Preference("transitions", "none") xalign 0.5
+
+            frame:
+                style_prefix "pref"
+                has vbox
+
+                label _("文字速度") xalign 0.5
+                bar value Preference("text speed") xalign 0.5
+            frame:
+                style_prefix "pref"
+                has vbox
+
+                label _("音乐音量") xalign 0.5
+                bar value Preference("music volume") xalign 0.5
+            frame:
+                style_prefix "pref"
+                has vbox
+
+                label _("音效音量") xalign 0.5
+                bar value Preference("sound volume") xalign 0.5
+                textbutton "测试" action Play("sound", "sound_test.ogg") style "soundtest_button" xalign 0.5
+
+        vbox:
+            spacing 15
+            frame:
+                style_prefix "pref"
+                has vbox
+
+                label _("快进") xalign 0.5
+                textbutton _("已读信息") action Preference("skip", "seen") xalign 0.5
+                textbutton _("所有信息") action Preference("skip", "all") xalign 0.5
+
+            frame:
+                style_prefix "pref"
+                has vbox
+
+                label _("选择之后") xalign 0.5
+                textbutton _("停止跳过") action Preference("after choices", "stop") xalign 0.5
+                textbutton _("保持跳过") action Preference("after choices", "skip") xalign 0.5
+
+            frame:
+                style_prefix "pref"
+                has vbox
+
+                label _("自动前进等待时间") xalign 0.5
+                bar value Preference("auto-forward time") xalign 0.5
+
+
+    imagebutton:
+        xpos 80 ypos 450
+        idle "gui/button/back_idle.png"
+        hover "gui/button/back_hover.png"
+        action ShowMenu("Nevigation")
+
+style pref_frame:
+    xmaximum 300
+    yminimum 100
+    xmargin 5
+    top_margin 5
+
+style pref_vbox:
+    xfill True
+
+style pref_button:
+    size_group "pref"
+    xalign 1.0
+
+style pref_slider:
+    xmaximum 192
+    xalign 1.0
+
+style soundtest_button:
+    xalign 1.0
+
 
 
 
@@ -559,11 +657,11 @@ screen review():
         mousewheel True
         draggable True
         scrollbars "vertical"
-        side_xalign 0.
+        side_xalign 0
 
         side_ysize 552
-        side_xsize 940
-        side_xpos 300
+        side_xsize 1000
+        side_xpos 200
         side_ypos 120
 
         for h in _history_list:

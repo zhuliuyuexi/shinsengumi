@@ -93,6 +93,7 @@ screen CG_tiandai():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -106,6 +107,16 @@ screen CG_tiandai():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
 
     #返回按钮
     imagebutton:
@@ -129,6 +140,7 @@ screen CG_shannan():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -142,6 +154,16 @@ screen CG_shannan():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
 
     #返回按钮
     imagebutton:
@@ -165,6 +187,7 @@ screen CG_tengtang():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -178,6 +201,16 @@ screen CG_tengtang():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
 
     #返回按钮
     imagebutton:
@@ -201,6 +234,7 @@ screen CG_chongtian():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -215,6 +249,15 @@ screen CG_chongtian():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
 
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
     #返回按钮
     imagebutton:
         xpos 30 ypos 660
@@ -237,6 +280,7 @@ screen CG_tufang():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -250,6 +294,16 @@ screen CG_tufang():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
 
     #返回按钮
     imagebutton:
@@ -273,6 +327,7 @@ screen CG_zhaiteng():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -286,6 +341,16 @@ screen CG_zhaiteng():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
 
     #返回按钮
     imagebutton:
@@ -309,6 +374,7 @@ screen CG_yuantian():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -322,6 +388,16 @@ screen CG_yuantian():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
 
     #返回按钮
     imagebutton:
@@ -345,6 +421,7 @@ screen CG_yongcang():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -358,6 +435,16 @@ screen CG_yongcang():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
 
     #返回按钮
     imagebutton:
@@ -380,6 +467,7 @@ screen CG_shanqi():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -393,6 +481,16 @@ screen CG_shanqi():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
 
     #返回按钮
     imagebutton:
@@ -416,6 +514,7 @@ screen CG_qita():
         background None
         left_padding 467
         top_margin 162
+        has vbox
 
         grid 3 3:
             xspacing 76
@@ -430,50 +529,19 @@ screen CG_qita():
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
             add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
 
+        hbox:
+            xpos 200
+            ypos 10
+            textbutton _("前一页") action FilePagePrevious()
+
+            for i in range(1, 11):
+                textbutton str(i) action FilePage(i)
+
+            textbutton _("后一页") action FilePageNext()
+
     #返回按钮
     imagebutton:
         xpos 30 ypos 660
         idle "gui/button/back_small.png"
         hover "gui/button/back_small2.png"
         action ShowMenu("CG")
-
-##音乐鉴赏#####################################################################
-init python:
-    mr = MusicRoom(fadeout=0.5, single_track=True)
-    mr.add("BGM/spring.ogg", always_unlocked=True)
-    mr.add("BGM/不不安稳.mp3", always_unlocked=False)
-    mr.add("BGM/万死一生.mp3", always_unlocked=False)
-    mr.add("BGM/夜巡.mp3", always_unlocked=False)
-
-screen music_room():
-    tag menu
-    add "gui/CG_all.png"
-
-    frame:
-        vbox:
-            text "音乐鉴赏"
-            textbutton "spring" action mr.Play("BGM/spring.ogg")
-            textbutton "不不安稳" action mr.Play("BGM/不不安稳.mp3")
-            textbutton "万死一生" action mr.Play("BGM/万死一生.mp3")
-            textbutton "夜巡" action mr.Play("BGM/夜巡.mp3")
-
-        hbox:
-            xpos 50 ypos 680 spacing 100
-            textbutton "下一首" action mr.Next()
-            textbutton "下一首" action mr.Previous()
-
-        vbox:
-            xpos 550 ypos 100
-            text "OP/ED" size 30
-            textbutton "花びらの刻" action mr.Play("BGM/花びらの刻.mp3", always_unlocked = True)
-        hbox:
-            xpos 550 ypos 680 spacing 100
-            textbutton "下一首" action mr.Next()
-            textbutton "下一首" action mr.Previous()
-
-        imagebutton:
-            xpos 30 ypos 460
-            idle "gui/button/back_small.png"
-            hover "gui/button/back_small2.png"
-            action Return()
-    on "replace" action mr.Play()

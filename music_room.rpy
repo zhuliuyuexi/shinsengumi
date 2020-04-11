@@ -9,6 +9,7 @@ init python:
 screen music_room:
     tag menu
     add "gui/musicroom.png"
+
     frame:
         top_margin 20
         left_margin 300
@@ -16,15 +17,35 @@ screen music_room:
         yminimum 900
         background "gui/hana_frame.png"
         vbox:
-            xalign 0.6 ypos 200
+            xpos 280 ypos 200
             text "音乐鉴赏" size 30 xalign 0.5
-            textbutton "花びらの刻" action Play("music", "BGM/花びらの刻.mp3") xalign 0.5
-            null height 20
+        vbox:
+            xpos 650 ypos 200
+            spacing 20
+            textbutton _("前一页") action FilePagePrevious()
+            textbutton "上一曲" action mr.Previous()
+            textbutton "停止" action mr.Stop()
             textbutton "下一曲" action mr.Next()
+            textbutton _("后一页") action FilePageNext()
     frame:
-        top_margin 600
-        left_margin 1000
-        xmaximum 1200
+        top_margin 280
+        left_margin 550
+        xminimum 800
+        yminimum 550
+        style_prefix "music_list"
+        background "gui/scrollbar/transparent.png"
+
+        grid 1 3:
+            yspacing 10
+            textbutton "花びらの刻" action Play("music", "BGM/花びらの刻.mp3")
+            textbutton "花びらの刻" action Play("music", "BGM/花びらの刻.mp3")
+            textbutton "花びらの刻" action Play("music", "BGM/花びらの刻.mp3")
+
+
+    frame:
+        top_margin 500
+        left_margin 950
+        xmaximum 1100
         ymaximum 600
         vbox:
             if config.has_music:

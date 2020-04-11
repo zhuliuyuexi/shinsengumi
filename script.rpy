@@ -19,6 +19,7 @@ define dsd = Character("队士丁")
 
 ###############################################################################################################################
 #设定参数的字库：
+define config.rollback_enabled = False
 #每一个可攻略对象的好感值均为其“姓氏缩写_love”：tf_love, ct_love, zt_love等
 define tf_love=0
 define ct_love=0
@@ -67,10 +68,6 @@ define jlzz=False #机龙之助出现
 define ytbs=False #原田匕首出现
 
 
-#点击开始界面
-#label before_main_menu:
-#    call screen press_start with Dissolve(3)
-#    with fade(3,3,3, color="#000")
 ########################################################
 label start:
     scene 宿舍
