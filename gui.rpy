@@ -22,7 +22,7 @@ init python:
 ## 界面中文本的颜色。
 
 ## 整个界面中使用的强调色，用于标记和突出显示文本。
-define gui.accent_color = '#888888'
+define gui.accent_color = '#ffcc00'
 
 ## 当既未选中也未悬停时用于文本按钮的颜色。
 define gui.idle_color = '#ffffff'
@@ -127,9 +127,9 @@ define gui.textbox_yalign = 1.0
 
 ## 叙述角色名称相对文本框的位置。可以是从左侧或顶部起的整数像素，或设为“0.5”来放
 ## 置到正中。
-define gui.name_xpos = 240
-define gui.name_ypos = 0
-
+define gui.name_xpos = 150
+define gui.name_ypos = -24
+define gui.name_text_outlines = [ (2, "#000000", 1, 1) ]
 ## 角色名称的水平对齐方式。0.0 为左侧对齐，0.5 为居中显示，而 1.0 为右侧对齐。
 define gui.name_xalign = 0.0
 
@@ -138,7 +138,7 @@ define gui.namebox_width = None
 define gui.namebox_height = None
 
 ## 包含角色名称的框的边界尺寸，以左、上、右、下顺序排列。
-define gui.namebox_borders = Borders(5, 5, 5, 5)
+define gui.namebox_borders = Borders(20, 5, 100, 5)
 
 ## 若为True，则名称框的背景将被平铺；若为False，则将缩放名称框的背景。
 define gui.namebox_tile = False
@@ -154,7 +154,11 @@ define gui.dialogue_width = 744
 
 ## 对话文本的水平对齐方式。0.0 为左侧对齐，0.5 为居中显示，而 1.0 为右侧对齐。
 define gui.dialogue_text_xalign = 0.0
-
+#根据官网的文献，可以在 gui 中加入以下两句：
+define gui.dialogue_text_outlines = [ (2, "#000000", 1, 1) ]  #设定对话正文有黑色背影。
+#第一个2代表阴影的宽度，如果改成0就是细阴影，改为1就是空心阴影，效果不好。改为2、3、4就是厚阴影；
+#第二个1是阴影的右侧偏移量。
+#第三个1是文字阴影的下方偏移量。
 
 ## 按钮 ##########################################################################
 ##
@@ -362,6 +366,8 @@ define gui.history_name_xpos = 150
 define gui.history_name_ypos = 0
 define gui.history_name_width = 255
 define gui.history_name_xalign = 1.0
+define gui.history_name_text_outlines = [ (2, "#000000", 1, 1) ]
+
 
 ## 对话文本的坐标、宽度和对齐方式。
 define gui.history_text_xpos = 180

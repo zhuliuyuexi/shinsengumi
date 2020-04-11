@@ -682,8 +682,7 @@ screen review():
                         ## set.
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
-
-                text h.what
+                text h.what outlines [ (1, "#000000", 0, 0), (0, "#000000", 2, 2) ]
 
         if not _history_list:
             label _("The dialogue history is empty.")
@@ -698,6 +697,7 @@ style history_text is gui_text
 style history_text is gui_text
 
 style history_label is gui_label
+
 style history_label_text is gui_label_text
 
 style history_window:
@@ -710,9 +710,13 @@ style history_name:
     ypos gui.history_name_ypos
     xsize gui.history_name_width
 
+
 style history_name_text:
     min_width gui.history_name_width
     text_align gui.history_name_xalign
+    color "#ffe26d"
+    outlines [ (1, "#000000", 0, 0), (0, "#000000", 2, 2) ]
+
 
 style history_text:
     xpos gui.history_text_xpos
