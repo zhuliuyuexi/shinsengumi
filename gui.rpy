@@ -22,7 +22,7 @@ init python:
 ## 界面中文本的颜色。
 
 ## 整个界面中使用的强调色，用于标记和突出显示文本。
-define gui.accent_color = '#ffcc00'
+define gui.accent_color = '#ff9e20'
 
 ## 当既未选中也未悬停时用于文本按钮的颜色。
 define gui.idle_color = '#ffffff'
@@ -31,11 +31,11 @@ define gui.idle_color = '#ffffff'
 define gui.idle_small_color = '#aaaaaa'
 
 ## 用于悬停的按钮和滑条的颜色。
-define gui.hover_color = '#e60707'
+define gui.hover_color = '#ffcc00'
 
 ## 用于选中但非焦点的文本按钮的颜色。当一个按钮为当前屏幕或设置选项值时，会处于
 ## 选中状态。
-define gui.selected_color = '#FA6EC4'
+define gui.selected_color = '#ffe50d'
 
 ## 用于无法选择的文本按钮的颜色。
 define gui.insensitive_color = '#ffffff'
@@ -216,16 +216,17 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## navigation button.
 
 # define gui.navigation_button_width = 250
-
+##鼠标#############################################################################
+define config.mouse = {"default" : [("gui/小刀鼠标.png", 0, 0)]}
 
 ## 选项按钮 ########################################################################
 ##
 ## 用于游戏内菜单的选项按钮。
 
-define gui.choice_button_width = 790
+define gui.choice_button_width = 600
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(100, 5, 100, 5)
+define gui.choice_button_borders = Borders(100, 30, 100, 20)
 define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
@@ -305,6 +306,7 @@ define gui.main_menu_text_xalign = 1.0
 ## Generic frames.
 define gui.frame_borders = Borders(1, 1, 1, 1)
 
+
 ## The frame that is used as part of the confirm screen.
 define gui.confirm_frame_borders = Borders(40, 40, 40, 40)
 
@@ -327,9 +329,9 @@ define gui.frame_tile = False
 
 ## The height of horizontal bars, scrollbars, and sliders. The width of vertical
 ## bars, scrollbars, and sliders.
-define gui.bar_size = 25
-define gui.scrollbar_size = 12
-define gui.slider_size = 25
+define gui.bar_size = 20
+define gui.scrollbar_size = 50
+define gui.slider_size = 20
 
 ## True if bar images should be tiled. False if they should be linearly scaled.
 define gui.bar_tile = False

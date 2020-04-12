@@ -241,17 +241,14 @@ screen quick_menu():
 
         hbox:
             style_prefix "quick"
-
-            xalign 0.5
-            yalign 1.0
-
-            textbutton _("历史") action ShowMenu('history')
-            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("保存") action ShowMenu('save')
-            textbutton _("快存") action QuickSave()
-            textbutton _("快读") action QuickLoad()
-            textbutton _("菜单") action ShowMenu('Nevigation')
+            xalign 0.078
+            yalign 0.985
+            imagebutton auto "gui/button/快捷菜单_%s.png" action ShowMenu('minimenu')
+        hbox:
+            style_prefix "quick"
+            xalign 0.905
+            yalign 0.985
+            imagebutton auto "gui/button/快捷存储_%s.png" action ShowMenu('minisave')
 
 
 ## 此代码确保只要玩家没有明确隐藏界面，就会在游戏中显示“quick_menu”屏幕。
@@ -268,6 +265,28 @@ style quick_button:
 
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
+
+screen minimenu():
+    frame:
+        xalign 0.05 yalign 0.985
+        background Frame ("gui/setting_block.png", tile=gui.frame_tile)
+        vbox:
+            textbutton _("设置") action ShowMenu('preferences')
+            textbutton _("历史") action ShowMenu('review')
+            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("自动") action Preference("auto-forward", "toggle")
+            textbutton _("返回") action Return('quick_menu')
+
+screen minisave():
+    frame:
+        xalign 0.95 yalign 0.985
+        background Frame ("gui/setting_block.png", tile=gui.frame_tile)
+        vbox:
+            textbutton _("保存") action ShowMenu('save')
+            textbutton _("快存") action QuickSave()
+            textbutton _("快读") action QuickLoad()
+            textbutton _("目录") action ShowMenu('Nevigation')
+            textbutton _("返回") action Return('quick_menu')
 
 
 ################################################################################
@@ -382,11 +401,12 @@ screen about():
         xfill True
         add "gui/main_menu.png"
         vbox:
-            xpos 150 ypos 130
+            xpos 150 ypos 150
             xsize 700 ysize 400
-            label "[config.name!t]"
             text _("{color=#000000}版本 [config.version!t]\n{/color}")
             text _("{color=#000000}制作者：竹流月汐，土方俊守\n{/color}")
+            text _("{color=#000000}故事取材自《燃烧吧！剑》、《新撰组血风录》以及其他相关著作、网页及传说。\n{/color}")
+            text _("{color=#000000}游戏广泛使用了众多游戏及音乐素材，故本作只为同道朋友私用，不做商用。\n{/color}")
             ## “gui.about”通常在 options.rpy 中设置。
             if gui.about:
                 text "[gui.about!t]\n"
@@ -421,7 +441,7 @@ style about_label_text:
 ## www.renpy.org/doc/html/screen_special.html#load
 screen save():
     tag menu
-    add "gui/main_menu.png"
+    add "gui/save_load.png"
     imagebutton:
         xpos 30 ypos 660
         idle "gui/button/back_small.png"
@@ -533,7 +553,6 @@ screen preferences():
             frame:
                 style_prefix "pref"
                 has vbox
-
                 label _("显示") xalign 0.5
                 textbutton _("窗口显示") action Preference("display", "window") xalign 0.5
                 textbutton _("全屏显示") action Preference("display", "fullscreen") xalign 0.5
@@ -549,22 +568,16 @@ screen preferences():
             frame:
                 style_prefix "pref"
                 has vbox
-
+                spacing 20
                 label _("文字速度") xalign 0.5
                 bar value Preference("text speed") xalign 0.5
             frame:
                 style_prefix "pref"
                 has vbox
-
+                spacing 20
                 label _("音乐音量") xalign 0.5
                 bar value Preference("music volume") xalign 0.5
-            frame:
-                style_prefix "pref"
-                has vbox
 
-                label _("音效音量") xalign 0.5
-                bar value Preference("sound volume") xalign 0.5
-                textbutton "测试" action Play("sound", "sound_test.ogg") style "soundtest_button" xalign 0.5
 
         vbox:
             spacing 15
@@ -587,10 +600,17 @@ screen preferences():
             frame:
                 style_prefix "pref"
                 has vbox
-
+                spacing 20
                 label _("自动前进等待时间") xalign 0.5
                 bar value Preference("auto-forward time") xalign 0.5
 
+            frame:
+                style_prefix "pref"
+                has vbox
+                spacing 20
+                label _("音效音量") xalign 0.5
+                bar value Preference("sound volume") xalign 0.5
+                textbutton "测试" action Play("sound", "sound_test.ogg") style "soundtest_button" xalign 0.5
 
     imagebutton:
         xpos 80 ypos 450
@@ -598,11 +618,13 @@ screen preferences():
         hover "gui/button/back_hover.png"
         action ShowMenu("Nevigation")
 
+
 style pref_frame:
+    background Frame("gui/setting_block.png", tile=gui.frame_tile)
     xmaximum 300
     yminimum 100
     xmargin 5
-    top_margin 5
+    top_margin 1
 
 style pref_vbox:
     xfill True
@@ -638,7 +660,7 @@ screen review():
 
     tag menu
 
-    add "gui/save_load.png"
+    add "gui/review.png"
 
     ## Avoid predicting this screen, as it can be very large.
     predict False
@@ -698,7 +720,9 @@ style history_text is gui_text
 
 style history_label is gui_label
 
-style history_label_text is gui_label_text
+style history_label_text:
+    color "#ffe26d"
+    outlines [ (1, "#000000", 0, 0), (0, "#000000", 2, 2) ]
 
 style history_window:
     xfill True
@@ -761,10 +785,8 @@ screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
 
     frame:
-
         vbox:
             xalign .5
             yalign .5
@@ -792,7 +814,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background Frame("gui/setting_block.png", gui.confirm_frame_borders, tile=gui.frame_tile)
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5
