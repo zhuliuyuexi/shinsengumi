@@ -728,7 +728,9 @@ label start:
                 $ intelligence = intelligence
         tf "近藤局长，我有事情要和你商量。"
         jt "好，总三郎你先下去吧。"
-        if tiandaicy = False:
+        if tiandaicy:
+            jump xyf
+        else:
             td "哟！还真巧啊。在这儿又遇见了。"
             zy "不是吧！！！你怎么也到了这儿啊？！"
             td "我和你一样，也穿越过来了。现在我叫做田代彪藏。是见习队员。"
@@ -738,6 +740,8 @@ label start:
             td "你变成男人了？"
             zy "呃……也不是……哎呀！你就当我是男人好了！啊，我还得去洗衣服呢，不跟你闲聊了！"
             td "………………"
+            jump xyf
+    label xyf:
         zy "衣服好多啊……我不在的时候，这些男人都是怎么洗衣服的？"
         ct "能洗就洗，洗不了就不洗了呗~"
         zy "诶？冲田队长，你怎么在这里？"
