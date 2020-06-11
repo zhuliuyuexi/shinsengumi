@@ -95,6 +95,7 @@ define jlzz=False #机龙之助出现
 define ytbs=False #原田匕首出现
 define meetbb=False #结识坂本龙马
 define children=False #生育能力
+define tiandaicy=False #入队前是否见过田代
 
 
 ########################################################
