@@ -236,19 +236,19 @@ screen quick_menu():
 
     ## 确保该菜单出现在其他屏幕之上，
     zorder 100
-
+    modal False
     if quick_menu:
 
         hbox:
             style_prefix "quick"
             xalign 0.078
             yalign 0.985
-            imagebutton auto "gui/button/快捷菜单_%s.png" action ShowMenu('minimenu')
+            imagebutton auto "gui/button/快捷菜单_%s.png" action Show('minimenu')
         hbox:
             style_prefix "quick"
             xalign 0.905
             yalign 0.985
-            imagebutton auto "gui/button/快捷存储_%s.png" action ShowMenu('minisave')
+            imagebutton auto "gui/button/快捷存储_%s.png" action Show('minisave')
 
 
 ## 此代码确保只要玩家没有明确隐藏界面，就会在游戏中显示“quick_menu”屏幕。
@@ -267,26 +267,32 @@ style quick_button_text:
     properties gui.button_text_properties("quick_button")
 
 screen minimenu():
+    modal True
+    zorder 200
     frame:
         xalign 0.05 yalign 0.985
-        background Frame ("gui/setting_block.png", tile=gui.frame_tile)
+        background Frame ("gui/mini.png", tile=gui.frame_tile)
+        left_padding 10 right_padding 10 top_padding 10 bottom_padding 10
         vbox:
             textbutton _("设置") action ShowMenu('preferences')
             textbutton _("历史") action ShowMenu('review')
             textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("返回") action Return('quick_menu')
+            textbutton _("取消") action Hide('minimenu')
 
 screen minisave():
+    modal False
+    zorder 200
     frame:
         xalign 0.95 yalign 0.985
-        background Frame ("gui/setting_block.png", tile=gui.frame_tile)
+        background Frame ("gui/mini.png", tile=gui.frame_tile)
+        left_padding 10 right_padding 10 top_padding 10 bottom_padding 10
         vbox:
             textbutton _("保存") action ShowMenu('save')
             textbutton _("快存") action QuickSave()
             textbutton _("快读") action QuickLoad()
             textbutton _("目录") action ShowMenu('Nevigation')
-            textbutton _("返回") action Return('quick_menu')
+            textbutton _("取消") action Hide('minisave')
 
 
 ################################################################################
@@ -316,7 +322,7 @@ screen main_menu():
 
     imagemap:
         ground "gui/transparent.png"
-        hotspot (0, 0, 1280, 720) focus_mask None action(Play("sound", "sounds/start.ogg"), ShowMenu("Nevigation"))
+        hotspot (0, 0, 1280, 720) focus_mask None action(Play("sound", "sounds/start.ogg"), ShowMenu('Nevigation'))
 
 #封面2
 screen Nevigation():
@@ -416,7 +422,7 @@ screen about():
             xpos 50 ypos 450
             idle "gui/button/back_idle.png"
             hover "gui/button/back_hover.png"
-            action ShowMenu("Nevigation")
+            action ShowMenu('Nevigation')
 
 
 ## 此变量在 options.rpy 中重新定义，来添加文本到关于屏幕。
@@ -446,7 +452,7 @@ screen save():
         xpos 30 ypos 660
         idle "gui/button/back_small.png"
         hover "gui/button/back_small2.png"
-        action ShowMenu("Nevigation")
+        action ShowMenu('Nevigation')
     frame:
         background None
         left_padding 30
@@ -494,7 +500,7 @@ screen load():
         xpos 30 ypos 600
         idle "gui/button/back_small.png"
         hover "gui/button/back_small2.png"
-        action ShowMenu("Nevigation")
+        action ShowMenu('Nevigation')
     frame:
         background None
         left_padding 30
@@ -616,7 +622,7 @@ screen preferences():
         xpos 80 ypos 450
         idle "gui/button/back_idle.png"
         hover "gui/button/back_hover.png"
-        action ShowMenu("Nevigation")
+        action ShowMenu('Nevigation')
 
 
 style pref_frame:
@@ -642,6 +648,17 @@ style soundtest_button:
 
 
 
+##成就屏幕##########################################################3
+screen award():
+    tag menu
+    add "gui/save_load.png"
+    imagebutton auto "gui/button/result_%s.png" action ShowMenu('result_award') xalign 0.2 yalign 0.3
+    imagebutton auto "gui/button/back_%s.png" action ShowMenu('Nevigation') xalign 0 yalign 0.5
+
+screen result_award():
+    tag menu
+    add "gui/save_load.png"
+    imagebutton auto "gui/button/back_%s.png" action ShowMenu('award') xalign 0 yalign 0.5
 
 ## 历史屏幕 ########################################################################
 ##
@@ -668,7 +685,7 @@ screen review():
         xpos 30 ypos 600
         idle "gui/button/back_small.png"
         hover "gui/button/back_small2.png"
-        action ShowMenu("Nevigation")
+        action ShowMenu('Nevigation')
     vpgrid:
         style_prefix "history"
 
@@ -756,7 +773,6 @@ style history_label:
 
 style history_label_text:
     xalign 0.5
-
 
 
 ## 帮助屏幕 ########################################################################
