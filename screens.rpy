@@ -277,7 +277,7 @@ screen minimenu():
             textbutton _("历史") action ShowMenu('review')
             textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("取消") action Hide('minimenu')
+            textbutton _("返回") action Hide('minimenu')
 
 screen minisave():
     modal False
@@ -291,7 +291,7 @@ screen minisave():
             textbutton _("快存") action QuickSave()
             textbutton _("快读") action QuickLoad()
             textbutton _("目录") action ShowMenu('Nevigation')
-            textbutton _("取消") action Hide('minisave')
+            textbutton _("返回") action Hide('minisave')
 
 
 ################################################################################
