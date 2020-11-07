@@ -79,12 +79,6 @@ screen CG():
             action ShowMenu("Nevigation")
 
 #田代的CG画册
-init python:
-    g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
 screen CG_tiandai():
     tag menu
     add "gui/cg_back.png"
@@ -98,15 +92,15 @@ screen CG_tiandai():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -126,12 +120,6 @@ screen CG_tiandai():
         action ShowMenu("CG")
 
 #山南的CG画册
-init python:
-    g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
 screen CG_shannan():
     tag menu
     add "gui/cg_back.png"
@@ -145,15 +133,15 @@ screen CG_shannan():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -173,12 +161,6 @@ screen CG_shannan():
         action ShowMenu("CG")
 
 #藤堂的CG画册
-init python:
-    g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
 screen CG_tengtang():
     tag menu
     add "gui/cg_back.png"
@@ -192,15 +174,15 @@ screen CG_tengtang():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -220,12 +202,6 @@ screen CG_tengtang():
         action ShowMenu("CG")
 
 #冲田的CG画册
-init python:
-    g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
 screen CG_chongtian():
     tag menu
     add "gui/cg_back.png"
@@ -239,15 +215,15 @@ screen CG_chongtian():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -266,12 +242,6 @@ screen CG_chongtian():
         action ShowMenu("CG")
 
 #土方的CG画册
-init python:
-    g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
 screen CG_tufang():
     tag menu
     add "gui/cg_back.png"
@@ -285,15 +255,15 @@ screen CG_tufang():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -313,12 +283,6 @@ screen CG_tufang():
         action ShowMenu("CG")
 
 #斋藤的CG画册
-init python:
-    g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
 screen CG_zhaiteng():
     tag menu
     add "gui/cg_back.png"
@@ -332,15 +296,15 @@ screen CG_zhaiteng():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("斋藤赏樱", "斋藤赏樱thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -360,12 +324,6 @@ screen CG_zhaiteng():
         action ShowMenu("CG")
 
 #原田的CG画册
-init python:
-    g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
 screen CG_yuantian():
     tag menu
     add "gui/cg_back.png"
@@ -379,15 +337,15 @@ screen CG_yuantian():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -407,12 +365,6 @@ screen CG_yuantian():
         action ShowMenu("CG")
 
 #永仓的CG画册
-init python:
-    g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
 screen CG_yongcang():
     tag menu
     add "gui/cg_back.png"
@@ -426,15 +378,15 @@ screen CG_yongcang():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("永仓NE", "永仓NEthumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -455,9 +407,9 @@ screen CG_yongcang():
 #山崎的CG画册
 init python:
     g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
+    g.locked_button = "images/CG/lock.png"#未解锁的图片按钮
     g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
+    g.unlock_image("土方池田屋.png")
 
 screen CG_shanqi():
     tag menu
@@ -472,15 +424,15 @@ screen CG_shanqi():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
@@ -502,10 +454,15 @@ screen CG_shanqi():
 #其他的CG画册
 init python:
     g = Gallery()
-    g.locked_button = "gui/button/lock.png"#未解锁的图片按钮
-    g.button("土方池田屋thumb")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
-    g.unlock_image("CG/土方池田屋.png")
-
+    g.locked_button = "images/CG/lock.png"#未解锁的图片按钮
+    g.button("吃饭")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
+    g.unlock_image("吃饭")
+    g.button("斋藤赏樱")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
+    g.unlock_image("斋藤赏樱")
+    g.button("永仓NE")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
+    g.unlock_image("永仓NE")
+    g.button("土方池田屋")#解锁后的图片按钮，以后每有一个就要相应的写2行代码
+    g.unlock_image("土方池田屋")
 screen CG_qita():
     tag menu
     add "gui/cg_back.png"
@@ -519,15 +476,15 @@ screen CG_qita():
         grid 3 3:
             xspacing 76
             yspacing 52
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
-            add g.make_button("土方池田屋thumb", "CG/土方池田屋thumb.png", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("吃饭", "吃饭thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
+            add g.make_button("土方池田屋", "土方池田屋thumb", xalgn = 0.5, yalign = 0.5)
 
         hbox:
             xpos 200
