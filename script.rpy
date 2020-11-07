@@ -58,6 +58,8 @@ define wt = Character("武田观柳斋")
 define config.rollback_enabled = False
 #需要用到的图像
 image black = "#000000"
+image BAD_END = im.Grayscale("较惨结束画面.png")
+image NORMAL_END = im.Sepia("一般结束画面.png")
 #每一个可攻略对象的好感值均为其"姓氏缩写_love"：tf_love, ct_love, zt_love等
 define tf_love=0
 define ct_love=0
@@ -565,7 +567,8 @@ label start:
                     "门！门怎么打不开！！！是谁从外面把门锁上了？！"
                     "窗户！窗户怎么被顶死了？！是谁？！是谁干的啊！！"
                     zy "救命啊！！！有人吗！！！有人听见吗！！！"
-                    #结束画面
+                    scene 较惨结束画面 with Dissolve(2)
+                    scene BAD_END with Dissolve(5)
                     return
             scene 壬生屯所道场
             sn "啊，都已经比完了吗？"
@@ -2268,7 +2271,8 @@ label tzjq:
         scene black
         show text with Pause(5):
             xalign 0.5, yalign 0.5
-        #结束画面
+        scene 较惨结束画面 with Dissolve(2)
+        scene BAD_END with Dissolve(5)
         return
 label shangyinghui:
     scene 土方房间傍晚
@@ -2703,7 +2707,8 @@ label shangyinghui:
                                             zy "等等……我……"
                                             yc "我不会让你有痛苦的……"
                                             "迷蒙中，我似乎看到他的嘴颤抖着说，痛苦就留给我吧……"
-                                            #结束画面
+                                            scene 一般结束画面 with Dissolve(2)
+                                            scene NORMAL_END with Dissolve(5)
                                             return
                                         "拿刀抵着自己的脖子":
                                             scene 食杂店
@@ -2726,7 +2731,9 @@ label shangyinghui:
                                                     scene black
                                                     show text with Pause(6):
                                                         xalign 0.5, yalign 0.5
-                                                    #结束画面
+                                                    scene 一般结束画面 with Dissolve(2)
+                                                    scene NORMAL_END with Dissolve(5)
+                                                    return
                                                 "你不相信的话可以去问小香啊":
                                                     yc "小香？这又是谁？"
                                                     zy "是和我一起穿越过来的朋友，或许她能证明我真的没有说谎。"
@@ -3099,8 +3106,9 @@ label tfct:
         "我赶紧闪开，冲田先生唰的一刀砍下，武藤的头就应声而落。"
         tf "…………………………………………"
         "虽然土方先生当时没说什么，但是根据局中法度，介错失误就是士道不觉悟，这样的人也是要切腹的。果然没过多久，上面就对我下达了命令…………"
-        #结束画面
-        return 
+        scene 一般结束画面 with Dissolve(2)
+        scene NORMAL_END with Dissolve(5)
+        return
 label liuyan:
     scene 壬生屯所院子
     "最近好像队里在传着什么流言，好像是说我从没跟女人亲近过。"
